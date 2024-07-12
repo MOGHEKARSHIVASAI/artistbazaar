@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cart.css') }}">
+    <title>Cart</title>
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('shop') }}">Shop</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('cart') }}">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <div class="cart-container">
+            <h2>Your Cart</h2>
+            <ul class="cart-items">
+                <!-- Sample Cart Items -->
+                <li class="cart-item">
+                    <div class="item-info">
+                        <img src="{{ url_for('static', filename='images/product1.jpg') }}" alt="Product Image">
+                        <div class="item-details">
+                            <h3>Product Name</h3>
+                            <p>Price: $XX.XX</p>
+                            <p>Quantity: 1</p>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn-remove">Remove</button>
+                    </div>
+                </li>
+                <!-- Repeat for each item -->
+            </ul>
+            <div class="cart-summary">
+                <p>Total Items: X</p>
+                <p>Total Price: $XX.XX</p>
+            </div>
+            <button class="btn-proceed">Proceed to Payment</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Artisan Bazaar. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
